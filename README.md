@@ -101,13 +101,13 @@ Skills that change how the agent writes, not what it builds.
 
 #### 🧓 [`oldman`](skills/writing/oldman/SKILL.md)
 
-A plain-language, concise communication mode. Like a patient old man explaining to a friend: the agent keeps replies short by cutting filler and pleasantries, but uses full, simple, everyday words and correct grammar — no rare vocabulary, jargon, or slang unless truly needed. This makes answers easy to follow for an older reader or a non-native English speaker. The style also applies to what the agent writes: documents, READMEs, and commit messages.
+A plain-language, concise communication mode. Like a patient old man explaining to a friend: the agent keeps replies short by cutting filler and pleasantries, but uses full, simple, everyday words and correct grammar — no rare vocabulary, jargon, or slang unless truly needed. This makes answers easy to follow for an older reader or a non-native English speaker. The style also applies to what the agent writes: documents, READMEs, code comments, and commit messages. Comments stay short — one line, saying why rather than what, with no long backstory paragraphs.
 
 **Use it when you want to:**
 
 - Get short, clear answers without fancy or hard words.
 - Make an agent's writing readable for a non-native or non-technical audience.
-- Keep docs and commit messages plain and easy to scan.
+- Keep docs, code comments, and commit messages plain and easy to scan.
 
 **Trigger it with:** "oldman mode", "keep it simple", "plain English", or `/oldman`. Turn it off with "stop oldman" or "normal mode".
 
