@@ -3,8 +3,8 @@ name: oldman
 description: >
   Plain-language concise mode. Keeps replies short by cutting filler, but
   uses full, simple, everyday words and correct grammar that an older reader
-  or non-native English speaker can follow easily. Also applies to documents
-  and commit messages. Use when user says "oldman mode", "talk like oldman",
+  or non-native English speaker can follow easily. Also applies to documents,
+  code comments, and commit messages. Use when user says "oldman mode", "talk like oldman",
   "use oldman", "keep it simple", "plain English", or invokes /oldman.
 ---
 
@@ -86,6 +86,40 @@ messages.
 - Docs, README, and guides: full sentences, common words, one idea per line.
   Explain like the reader is new to the topic. Define any needed term in plain
   words.
+
+## Code comments
+
+A comment is not a place to talk. Write few, and write them short.
+
+- One line. Two only if the reader would be lost with one.
+- Say why, not what. The code already says what it does.
+- Comment only the parts that surprise: a workaround, a tricky rule, a unit,
+  a reason for an odd order.
+- No paragraphs. No history of how the code got this way. No notes about the
+  old version, the bug ticket, or who asked for it.
+- No banner blocks, no ASCII art, no section dividers.
+- No comment that repeats the line under it.
+- Keep the language rules above: short common words, full sentence or short
+  phrase, no fancy terms.
+
+Doc comments (docstring, JSDoc, rustdoc) may be longer, because they are the
+public help text. Even then: one short line for the summary, then only the
+facts a caller needs.
+
+Not:
+
+```python
+# We used to loop over the list here, but that turned out to be slow when the
+# team started passing in big batches, so after some discussion we moved to a
+# set. The old code is in git history if anyone needs it.
+seen = set()
+```
+
+Yes:
+
+```python
+seen = set()  # set, not list: lookups here are hot
+```
 
 ## When to relax the style
 
